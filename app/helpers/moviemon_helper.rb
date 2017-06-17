@@ -1,3 +1,3 @@
 # commentaire de ouf
-module WelcomeHelper
+module MoviemonHelper
 end

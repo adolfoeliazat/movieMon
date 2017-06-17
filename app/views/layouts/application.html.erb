@@ -8,11 +8,46 @@
   <title><%= @title %></title>
 </head>
 <body>
-   <div class="container">
-     <section id="main-content">
-      <%= yield %>
-    </section>
+
+  <div id="gameboy">
+      <div id="screen">
+        <a href="/clear" id="power" ></a>
+
+        <div id="content">
+          <%= yield %>
+        </div>
+        <div>
+          <h3>GameBoy</h3>
+        </div>
+    </div>
+
+    <div id="controls">
+      <div>
+        <div id="arrows">
+          <div class="text-center">
+            <%= link_to "", yield(:up) %>
+          </div>
+          <div class="text-center">
+            <%= link_to "", yield(:left) %>
+            <span></span>
+            <%= link_to "", yield(:right) %>
+          </div>
+          <div class="text-center">
+            <%= link_to "", yield(:down) %>
+          </div>
+        </div>
+        <div id="round-btns">
+          <%= link_to "B", yield(:b) %>
+          <%= link_to "A", yield(:a) %>
+        </div>
+      </div>
+      <div id="low-controls">
+        <%= link_to "Select", yield(:select) %>
+        <%= link_to "Start", yield(:start) %>
+      </div>
+    </div>
   </div>
-<%= render "layouts/footer"%>
+
+<!-- < render "layouts/footer"%> -->
 </body>
 </html>
