@@ -28,4 +28,4 @@ rails server
 ## Authors
 
 * **Zane Anis** - [mzane42](https://github.com/mzane42)
-* **Laurent Mathou** lmathou
+* **Laurent Mathou** - lmathou
