@@ -182,3 +182,15 @@ ul {
 .player_position {
     position: absolute;
 }
+
+.runaway-container {
+  margin-top: 40px;
+}
+
+.runaway-container p {
+  font-style: italic
+}
+
+.runaway-container b {
+  font-size: 39px;
+}

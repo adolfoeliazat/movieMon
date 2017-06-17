@@ -8,7 +8,7 @@ class Game
 							'tt1285016', 
 							'tt1739212', 
 							'tt0096895', 
-							'tt0353496', 
+							'tt0068646', 
 							'tt0109830',
 							'tt1098327',
 							'tt0286716',
@@ -22,6 +22,7 @@ class Game
 					m = JSON.load(open("http://www.omdbapi.com/?i=#{id}&type=movie&page=2&apikey=8f9f9766&"))
 				rescue
 				end
+				m['status'] = 0
 				@movimons.push(m)
 			end
 		else

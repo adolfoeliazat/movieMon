@@ -7,7 +7,6 @@
 <div class="map">
 	<% @map.each_with_index do |row, x| %>
 		<% row.each_with_index do |t, y| %>
-
 			<img
 				style="position: absolute; left: <%=x * 30 + 50%>px; top: <%=y * 30 + 20%>px"
 				src="/assets/<%= t %>"

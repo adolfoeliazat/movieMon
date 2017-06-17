@@ -1,0 +1,31 @@
+<% a "/battles/battle/#{params[:id]}/hit" %>
+<% b "/battles/runaway?id=#{params[:id]}" %>
+
+<div class="battle-container">
+	Moviemon :
+	<div class="battle-block">
+		<div class="column">
+			<b><%= $game.battle.movie["Director"] %></b>
+			<b>Energy : <%= $game.battle.movie["energy"] %></b>
+			<b>Hit point : <%= $game.battle.movie["rating"] %></b>
+		</div>
+		<div class="column movie-block-2">
+			<%= $game.battle.movie["Title"] %>
+			<img style="height: 100px; width: 100px" src="<%= $game.battle.movie['Poster']%>" />
+		</div>
+	</div>
+	You :
+	<div class="battle-block">
+		<div class="column">
+			<b><%= $player.name %></b>
+			<b>Energy : <%= $game.battle.playerenergy %></b>
+			<b>Hit point : <%= $player.hitpoint %></b>
+		</div>
+
+
+	</div>
+	<div class="battle-block">
+		<b>A : Hit</b>
+		<b>B : Run away</b>
+	</div>
+</div>

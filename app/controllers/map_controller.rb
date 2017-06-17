@@ -48,11 +48,25 @@ class MapController < ApplicationController
             end
 
 			if @map[@position['x']][@position['y']] == 'tall_grass.png' && !params['nobattle']
-				#get_battle
+				get_battle
 			end
         else
             redirect_to "/"
         end
+  	end
+
+  	def get_battle
+	    battle = rand(6)
+        if battle == 0
+            start_battle
+        else
+            redirect_to "/map?nobattle=true"
+        end
+  	end
+
+  	def start_battle
+       	number = rand(9)
+        redirect_to "/battles/battle/#{number}"
   	end
 
 end

@@ -2,7 +2,8 @@ class Player
 	attr_accessor :name, :position, :hitpoint, :energy, :direction
 	def initialize player = nil
 		if (player == nil)
-			@name = (0...8).map { (65 + rand(26)).chr }.join
+			@names = ['Sacha', 'Ondine', 'Pierre', 'Prof Chen', 'Jessie', 'James']
+			@name = @names[rand(5)]
 			@hitpoint = 5
 			@position = {
 				'x' => 5,
