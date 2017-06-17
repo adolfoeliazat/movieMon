@@ -1,0 +1,29 @@
+<% up "/menu/#{@previous}/#{@from}?nobattle=true" %>
+<% down "/menu/#{@next}/#{@from}?nobattle=true" %>
+
+<% if @current == 1 %>
+<% a "/moviedex/0/menu" %>
+<% elsif @current == 2 %>
+<% a "/save/1" %>
+<% elsif @current == 3 %>
+<% a "/load/1" %>
+<% end %>
+
+<% b "/" + @from + "?nobattle=true" %>
+
+<div>
+	<div class="slot <%= 'selected' if @current == 1 %>">
+		Moviedex
+	</div>
+	<div class="slot <%= 'selected' if @current == 2 %>">
+		Save
+	</div>
+	<div class="slot <%= 'selected' if @current == 3 %>">
+		Load
+	</div>
+</div>
+
+<div class="text-center">
+	Press A to select<br/>
+	Press B to return to the map
+</div>

@@ -1,0 +1,17 @@
+<% up   "/save/#{@previous}" %>
+<% down "/save/#{@next}" %>
+<% a    "/save/slot/#{@current}" %>
+<% b    "/map" %>
+<div>
+	<%= @message %>
+	<div class="slot <%= 'selected' if @current == 1 %>">
+		<%= @slot1 %>
+	</div>
+	<div class="slot <%= 'selected' if @current == 2 %>">
+		<%= @slot2 %>
+	</div>
+	<div class="slot <%= 'selected' if @current == 3 %>">
+		<%= @slot3 %>
+	</div>
+</div>
+<div class="text-center">Press B to return</div>

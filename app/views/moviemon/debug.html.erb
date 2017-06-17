@@ -1,0 +1,9 @@
+<label>Player Name</label> <%= $player.name %><br/>
+<label>Player Position</label> <%= $player.position %><br/>
+<label>Player hitpoint</label> <%= $player.hitpoint %><br/>
+<br/><br/>
+<ul>
+<%= $game.movimons.map do |movie| %>
+	<li>- <%= movie['Title'] %> - <%=  movie['status'] %></li>
+<% end %>
+</ul>

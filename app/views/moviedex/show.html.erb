@@ -1,0 +1,37 @@
+<%= left ("/moviedex/" + (@movieId - 1 > 0 ? @movieId - 1 : $game.movimons.length - 1).to_s) + "/#{@from}"%>
+<%= right ("/moviedex/" + (@movieId + 1 < $game.movimons.length ? @movieId + 1 : 0).to_s) + "/#{@from}"%>
+<%= b ('/' + params['from'] + "?nobattle=true") %>
+
+<%= start ('/menu/0/moviedex') %>
+
+<div style="width: 100px;" class=column>
+</div>
+<div class="column">
+<% if !@moviemon.nil? %>
+  <% if @moviemon['status'] == 0 || @moviemon['status'] == 1 %>
+  <div class="battle-block">
+	<div class="column">
+	  <p> <%= @moviemon['Title'] %> </p>
+	  <%= image_tag @moviemon['Poster'], size: "100x100" %>
+	</div>
+  </div>
+  <% else %>
+  <div class="battle-block">
+	<div class="column">
+	  <p> Title: <%= @moviemon["Title"] %> </p>
+	  <p> Year: <%= @moviemon["Year"] %> </p>
+	  <p> Rated: <%= @moviemon["rating"] %> </p>
+	  <p> Released: <%= @moviemon["Released"] %> </p>
+	</div>
+	<div class="column">
+	  <p> <%= @moviemon["Director"] %> </p>
+	  <%= image_tag @moviemon["Poster"], size: "100x100" %>
+	</div>
+  </div>
+  <% end %>
+<% end %>
+<div class="text-center">
+	<%= "#{@movieId} / #{$game.movimons.length}" %><br/>
+	Press B to return, navigate with the arrows
+</div>
+</div>
