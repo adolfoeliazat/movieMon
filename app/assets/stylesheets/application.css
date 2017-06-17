@@ -173,3 +173,12 @@ ul {
 .movie-block-2 {
    align-items: flex-end; text-align: right
 }
+
+#content .map {
+    height: 100%;
+    overflow: hidden;
+}
+
+.player_position {
+    position: absolute;
+}

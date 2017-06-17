@@ -1,0 +1,25 @@
+<% up "/map?move=up" %>
+<% down "/map?move=down" %>
+<% right "/map?move=right" %>
+<% left "/map?move=left" %>
+<% start "/menu/0/map" %>
+
+<div class="map">
+	<% @map.each_with_index do |row, x| %>
+		<% row.each_with_index do |t, y| %>
+
+			<img
+				style="position: absolute; left: <%=x * 30 + 50%>px; top: <%=y * 30 + 20%>px"
+				src="/assets/<%= t %>"
+				width="30" height="30"/>
+			<% if x == @position['x'] && y == @position['y'] %>
+				<img
+					style="position: absolute; left: <%=x * 30 + 50%>px; top: <%=y * 30 + 20%>px"
+					src="/assets/<%=$player.direction%>.png"
+					width="30" height="30"/>
+			<% end %>
+	
+		<% end %>
+
+	<% end %>
+</div>
