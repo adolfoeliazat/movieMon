@@ -21,8 +21,6 @@ bundle install
 ~~~
 
 ## Running the server :
-**Note:** the client side will run on port 3000
-
 ~~~bash
 rails server
 ~~~
@@ -30,4 +28,4 @@ rails server
 ## Authors
 
 * **Zane Anis** - [mzane42](https://github.com/mzane42)
-* **Laurent Mathou** [lmathou]
+* **Laurent Mathou** - lmathou
