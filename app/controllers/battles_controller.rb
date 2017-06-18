@@ -25,13 +25,13 @@ class BattlesController < ApplicationController
 		if $player.nil? || $game.nil?
 			redirect_to "/"
 		else
-			fail = (Random.rand(13) > $game.battle.movie["rating"])
+			fail = (Random.rand(13) > $game.battle.movie["rating"].to_i)
 
 			$game.battle.movie["energy"] -= $player.hitpoint
 			if fail
 				@message = "#{$game.battle.movie["Title"]} failed to attack"
 			else
-				$game.battle.playerenergy -= $game.battle.movie["rating"]
+				$game.battle.playerenergy -= $game.battle.movie["rating"].to_i
 			end
 
 			if $game.battle.movie["energy"] <= 0
