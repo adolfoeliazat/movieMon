@@ -6,8 +6,8 @@
 	<div class="battle-block">
 		<div class="column">
 			<b><%= $game.battle.movie["Director"] %></b>
-			<b>Energy : <%= $game.battle.movie["energy"] %></b>
-			<b>Hit point : <%= $game.battle.movie["rating"] %></b>
+			<b>Energy : <%= '%.2f' % $game.battle.movie["energy"] %></b>
+			<b>Hit point : <%= '%.2f' % $game.battle.movie["rating"] %></b>
 		</div>
 		<div class="column movie-block-2">
 			<%= $game.battle.movie["Title"] %>
@@ -19,8 +19,8 @@
 	<div class="battle-block">
 		<div class="column">
 			<b><%= $player.name %></b>
-			<b>Energy : <%= $game.battle.playerenergy %></b>
-			<b>Hit point : <%= $player.hitpoint %></b>
+			<b>Energy : <%= '%.2f' % $game.battle.playerenergy %></b>
+			<b>Hit point : <%= '%.2f' % $player.hitpoint %></b>
 		</div>
 
 
