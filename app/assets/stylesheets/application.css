@@ -84,6 +84,12 @@ a {
 #arrows a {
    cursor: pointer;
 }
+#arrows a:hover {
+   background-color: #444444;
+}
+#arrows a:active {
+   background-color: #666;
+}
 #round-btns a {
    border-radius: 50%;
    border: none;
@@ -104,6 +110,12 @@ a {
    position: relative;
    top: -15px;
 }
+#round-btns a:last-child:hover, #round-btns a:first-child:hover {
+   background-color: #b01047;
+}
+#round-btns a:last-child:active, #round-btns a:first-child:active {
+   background-color: #c5255c;
+}
 #low-controls a {
    border-radius: 5px;
    border: none;
@@ -113,6 +125,12 @@ a {
    padding: 5px 15px;
    text-transform: uppercase;
    margin: 10px;
+}
+#low-controls a:hover {
+   background-color: #444444;
+}
+#low-controls a:active {
+   background-color: #666;
 }
 .text-center {
    text-align: center;
