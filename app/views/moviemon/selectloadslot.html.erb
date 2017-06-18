@@ -1,7 +1,7 @@
 <% up   "/load/#{@previous}" %>
 <% down "/load/#{@next}" %>
 <% a    "/load/slot/#{@current}" %>
-<% b    "/map" %>
+<% select "/map" %>
 <div>
 	<%= @message %>
 	<div class="slot <%= 'selected' if @current == 1 %>">
@@ -14,4 +14,4 @@
 		<%= @slot3 %>
 	</div>
 </div>
-<div class="text-center">Press B to return</div>
+<div class="text-center">Press [select] to return</div>

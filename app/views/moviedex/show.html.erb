@@ -1,6 +1,7 @@
 <%= left ("/moviedex/" + (@movieId - 1 > 0 ? @movieId - 1 : $game.movimons.length - 1).to_s) + "/#{@from}"%>
 <%= right ("/moviedex/" + (@movieId + 1 < $game.movimons.length ? @movieId + 1 : 0).to_s) + "/#{@from}"%>
 <%= b ('/' + params['from'] + "?nobattle=true") %>
+<%= select ('/map') %>
 
 <%= start ('/menu/0/moviedex') %>
 

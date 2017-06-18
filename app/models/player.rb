@@ -9,8 +9,8 @@ class Player
 				'x' => 5,
 				'y' => 9
 			}
-			@direction = "bottom"
-      @energy = 50
+			@direction = "top"
+      		@energy = 50
 		else
 			@name = player["name"]
 			@position = player["position"]
